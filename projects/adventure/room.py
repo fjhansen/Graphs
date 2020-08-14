@@ -13,6 +13,9 @@ class Room:
         self.y = y
     def __str__(self):
         return f"\n-------------------\n\n{self.name}\n\n   {self.description}\n\n{self.get_exits_string()}\n"
+    def __repr__(self):
+        return str(self.id)
+
     def print_room_description(self, player):
         print(str(self))
     def get_exits(self):
@@ -46,12 +49,16 @@ class Room:
             return None
     def get_room_in_direction(self, direction):
         if direction == "n":
+            print(self.n_to)
             return self.n_to
         elif direction == "s":
+            print(self.s_to)
             return self.s_to
         elif direction == "e":
+            print(self.e_to)
             return self.e_to
         elif direction == "w":
+            print(self.w_to)
             return self.w_to
         else:
             return None

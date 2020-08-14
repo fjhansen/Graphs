@@ -151,6 +151,7 @@ class Graph:
         
 
         while q.size() > 0:
+                  print("Q_TEST: \n",q.queue)
                   current_path = q.dequeue()
                   last_node = current_path[-1]
                   if last_node not in visited:
@@ -295,9 +296,9 @@ if __name__ == '__main__':
         1, 2, 4, 7, 6, 3, 5
         1, 2, 4, 6, 3, 5, 7
     '''
-    graph.dft(1)
-    print("DFT: \n", graph.dft(1))
-    graph.dft_recursive(1)
+##    graph.dft(1)
+##    print("DFT: \n", graph.dft(1))
+##    graph.dft_recursive(1)
 
     '''
     Valid BFS path:
@@ -310,6 +311,6 @@ if __name__ == '__main__':
         [1, 2, 4, 6]
         [1, 2, 4, 7, 6]
     '''
-    print("DFS: \n",graph.dfs(1, 6))
-    print("DFS_R: \n",graph.dfs_recursive(1, 6))
+##    print("DFS: \n",graph.dfs(1, 6))
+##    print("DFS_R: \n",graph.dfs_recursive(1, 6))
 

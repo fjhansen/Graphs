@@ -8,6 +8,10 @@ class World:
         self.rooms = {}
         self.room_grid = []
         self.grid_size = 0
+        
+    def __repr__(self):
+        return str(self.rooms)
+
     def load_graph(self, room_graph):
         num_rooms = len(room_graph)
         rooms = [None] * num_rooms
